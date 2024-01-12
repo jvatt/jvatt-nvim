@@ -21,14 +21,6 @@ return {
     config = function()
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({
-        -- Fix 'vim global' warnings
-        settings = {
-          Lua = {
-            diagnostics = {
-              globals = { 'vim' }
-            }
-          }
-        }
       })
       lspconfig.tsserver.setup({})
     end
