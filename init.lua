@@ -5,4 +5,7 @@ require('lazynvim')
 -- Keymaps
 require('keymap')
 -- Load vimscript
-vim.cmd('source vimsettings.vim')
+local current_file = vim.fn.expand("<sfile>")
+local current_dir = vim.fn.fnamemodify(current_file, ":p:h")
+local scriptPath = current_dir .. '/vimsettings.vim'
+vim.cmd('source '.. scriptPath)
