@@ -2,6 +2,7 @@
 require('lazynvim')
 -- Keymaps
 require('keymap')
-
+-- Treesitter
+require('treesitter')
 -- Load vimscript
 vim.cmd('source vimsettings.vim')
