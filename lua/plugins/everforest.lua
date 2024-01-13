@@ -8,9 +8,8 @@ return {
       termguicolors = true,
       background = "hard",
     })
-    vim.cmd('colorscheme everforest')
+    vim.cmd("colorscheme everforest")
     -- For better performance
-    vim.cmd('let g:everforest_better_performance = 1')
+    vim.cmd("let g:everforest_better_performance = 1")
   end,
 }
-
