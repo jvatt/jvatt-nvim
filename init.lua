@@ -4,6 +4,8 @@ require('mapleader')
 require('lazynvim')
 -- Keymaps
 require('keymap')
+-- Autoformat
+require('autoformat')
 -- Load vimscript
 local current_file = vim.fn.expand("<sfile>")
 local current_dir = vim.fn.fnamemodify(current_file, ":p:h")
