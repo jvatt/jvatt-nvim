@@ -6,3 +6,4 @@ set shiftwidth=2
 set number
 set relativenumber
 set title
+set updatetime=750
