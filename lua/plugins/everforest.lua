@@ -1,3 +1,4 @@
+--[[ Uncomment to enable
 return {
   "neanias/everforest-nvim",
   version = false,
@@ -13,3 +14,6 @@ return {
     vim.cmd("let g:everforest_better_performance = 1")
   end,
 }
+]]
+--
+return {}

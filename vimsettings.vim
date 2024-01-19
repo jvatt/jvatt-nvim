@@ -7,3 +7,5 @@ set number
 set relativenumber
 set title
 set updatetime=750
+set termguicolors
+colorscheme melange
