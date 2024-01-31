@@ -23,3 +23,7 @@ vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
 -- Space + gp
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", {})
 vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", {})
+
+-- VIM -------------
+-- Space + y
+vim.keymap.set("v", "<leader>y", '"+y', {})
