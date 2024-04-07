@@ -7,6 +7,10 @@ return {
       auto_install = true,
       highlight = { enable = true },
       indent = { enable = true },
+      git = {
+        enable = true,
+        ignore = false,
+      },
     })
   end,
 }
