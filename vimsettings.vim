@@ -9,3 +9,4 @@ set title
 set updatetime=750
 set termguicolors
 colorscheme melange
+language en_US
