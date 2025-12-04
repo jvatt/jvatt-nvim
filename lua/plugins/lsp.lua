@@ -1,32 +1,34 @@
 return {
-  {
-    "williamboman/mason.nvim",
-    config = function()
-      require("mason").setup()
-    end,
-  },
-  {
-    "williamboman/mason-lspconfig.nvim",
-    config = function()
-      require("mason-lspconfig").setup({
-        ensure_installed = {
-          "lua_ls",
-          "ts_ls",
-        },
-      })
-    end,
-  },
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+	{
+		"williamboman/mason.nvim",
+		config = function()
+			require("mason").setup()
+		end,
+	},
+	{
+		"williamboman/mason-lspconfig.nvim",
+		config = function()
+			require("mason-lspconfig").setup({
+				ensure_installed = {
+					"lua_ls",
+					"ts_ls",
+				},
+			})
+		end,
+	},
+	{
+		"neovim/nvim-lspconfig",
+		config = function()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      vim.lsp.config("lua_ls", {
-        capabilities = capabilities,
-      })
-      vim.lsp.config("ts_ls", {
-        capabilities = capabilities,
-      })
-    end,
-  },
+			vim.lsp.enable("lua_ls")
+			vim.lsp.config("lua_ls", {
+				capabilities = capabilities,
+			})
+			vim.lsp.enable("ts_ls")
+			vim.lsp.config("ts_ls", {
+				capabilities = capabilities,
+			})
+		end,
+	},
 }
