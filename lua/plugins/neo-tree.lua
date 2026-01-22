@@ -16,6 +16,18 @@ return {
           ["<2-LeftMouse>"] = "noop", -- Disables double-click to open
         },
       },
+      -- Show relative line numbers
+      event_handlers = {
+        {
+          event = "neo_tree_buffer_enter",
+          handler = function()
+            vim.cmd([[
+          setlocal relativenumber
+        ]])
+          end,
+        },
+      },
+
       auto_expand_width = true,
       filesystem = {
         filtered_items = {
