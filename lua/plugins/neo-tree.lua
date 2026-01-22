@@ -9,6 +9,13 @@ return {
   },
   config = function()
     require("neo-tree").setup({
+      -- Disable mouse
+      window = {
+        mappings = {
+          ["<LeftMouse>"] = "noop",
+          ["<2-LeftMouse>"] = "noop", -- Disables double-click to open
+        },
+      },
       auto_expand_width = true,
       filesystem = {
         filtered_items = {
@@ -18,5 +25,5 @@ return {
         },
       },
     })
-  end
+  end,
 }
