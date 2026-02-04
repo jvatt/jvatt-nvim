@@ -35,3 +35,5 @@ end)
 vim.keymap.set("v", "<leader>y", '"+y', {})
 -- Space + w
 vim.keymap.set("n", "<leader>w", "<ESC>:w<CR>")
+-- Space + n
+vim.keymap.set("n", "<C-n>", ":lua vim.diagnostic.goto_next()<CR>")
