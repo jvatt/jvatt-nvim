@@ -23,6 +23,14 @@ return {
 
 			vim.lsp.enable("lua_ls")
 			vim.lsp.config("lua_ls", {
+				settings = {
+					Lua = {
+						diagnostics = {
+							-- Get rid of 'undefined global vim' warning
+							globals = { "vim" },
+						},
+					},
+				},
 				capabilities = capabilities,
 			})
 			vim.lsp.enable("ts_ls")
