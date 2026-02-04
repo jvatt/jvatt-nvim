@@ -37,6 +37,14 @@ return {
 			vim.lsp.config("ts_ls", {
 				capabilities = capabilities,
 			})
+			vim.lsp.enable("graphql")
+			vim.lsp.config("graphql", {
+				capabilities = capabilities,
+			})
+			vim.lsp.enable("basedpyright")
+			vim.lsp.config("basedpyright", {
+				capabilities = capabilities,
+			})
 		end,
 	},
 }
