@@ -21,6 +21,9 @@ return {
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
+			vim.lsp.handlers["textDocument/hover"] =
+				vim.lsp.with(vim.lsp.handlers.hover, { max_width = 120, max_height = 60, border = "rounded" })
+
 			vim.lsp.enable("lua_ls")
 			vim.lsp.config("lua_ls", {
 				settings = {
@@ -35,10 +38,6 @@ return {
 			})
 			vim.lsp.enable("ts_ls")
 			vim.lsp.config("ts_ls", {
-				capabilities = capabilities,
-			})
-			vim.lsp.enable("graphql")
-			vim.lsp.config("graphql", {
 				capabilities = capabilities,
 			})
 			vim.lsp.enable("basedpyright")
